@@ -3,7 +3,7 @@ FROM node:16
 
 WORKDIR /app
 
-COPY . /usr/src/app/
+COPY . .
 
 RUN npm ci
 
