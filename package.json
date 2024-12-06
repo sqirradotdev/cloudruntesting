@@ -1,14 +1,14 @@
 {
   "name": "v2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon ./src/server/server.js",
     "start": "node ./src/server/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Wiguna",
   "license": "ISC",
   "description": "",
   "dependencies": {

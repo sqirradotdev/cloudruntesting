@@ -1,0 +1,23 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/submissionmlgc-wigunasukmana/mlgc-wiguna', '.']
+
+  # Step 2: Push the Docker image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/submissionmlgc-wigunasukmana/mlgc-wiguna']
+
+  # Step 3: Deploy to Cloud Run (optional)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'mlgc-wiguna'
+      - '--image=gcr.io/submissionmlgc-wigunasukmana/mlgc-wiguna'
+      - '--platform=managed'
+      - '--region=asia-southeast2'
+      - '--allow-unauthenticated'
+
+images:
+  - 'gcr.io/submissionmlgc-wigunasukmana/mlgc-wiguna'
