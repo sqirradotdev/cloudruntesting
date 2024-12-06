@@ -17,7 +17,7 @@
     "@hapi/inert": "^7.1.0",
     "@hapi/joi": "^17.1.1",
     "@hapi/vision": "^7.0.3",
-    "@tensorflow/tfjs-node": "^4.22.0",
+    "@tensorflow/tfjs-node": "^4.0.0",
     "dotenv": "^16.4.7",
     "hapi": "^18.1.0",
     "multipart": "^0.1.5"
